@@ -197,6 +197,9 @@ $ kubectl exec -it secured -- sh
 ## Defining a Pod’s Resource Requirements
 
 Create a resource quota named `apps` under the namespace `rq-demo` using the following YAML definition in the file `rq.yaml`.
+```bash
+$ kubectl create my-quota --hard=cpu=1,memory=1G,pods=2,services=3,replicationcontrollers=2,resourcequotas=1,secrets=5,persistentvolumeclaims=10
+```
 
 ```yaml
 apiVersion: v1
